@@ -1,5 +1,6 @@
 package com.sensedia.microservice.kit.model
 
+import com.sensedia.microservice.kit.enum.Gender
 import javax.persistence.CascadeType
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -20,7 +21,7 @@ class Kit(
     val phone: String,
 
     @Column(name = "gender")
-    val gender: String,
+    val gender: Gender,
 
     @OneToMany(cascade = [CascadeType.ALL], mappedBy = "kit")
     var specifications: List<Specification>? = null

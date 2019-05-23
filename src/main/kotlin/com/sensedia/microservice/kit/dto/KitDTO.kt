@@ -1,6 +1,7 @@
 package com.sensedia.microservice.kit.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import com.sensedia.microservice.kit.enum.Gender
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
 
@@ -11,8 +12,8 @@ data class KitDTO(
     @field: NotBlank
     val phone: String,
 
-    @field: NotBlank
-    val gender: String,
+    @field: NotNull
+    val gender: Gender,
 
     @field: NotNull
     var specifications: List<SpecificationDTO>

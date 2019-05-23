@@ -12,7 +12,7 @@ class KitServiceImpl : KitService {
     @Autowired
     lateinit var kitRepository: KitRepository
 
-    override fun create(kit: Kit): Kit {
-        return kitRepository.save(kit)
-    }
+    override fun create(kit: Kit) = kitRepository.save(kit)
+
+    override fun find(id: Long): Kit = kitRepository.findById(id).get()
 }
