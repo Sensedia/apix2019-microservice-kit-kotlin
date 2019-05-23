@@ -15,4 +15,6 @@ class KitServiceImpl : KitService {
     override fun create(kit: Kit) = kitRepository.save(kit)
 
     override fun find(id: Long): Kit = kitRepository.findById(id).get()
+
+    override fun deleteById(id: Long) = kitRepository.deleteById(id)
 }
